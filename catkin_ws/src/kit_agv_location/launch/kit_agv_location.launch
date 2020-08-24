@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="sensor_ip" default="192.168.1.3"/>
+  <arg name="host_ip" default="192.168.1.5"/>
+  <arg name="map_file" default="$(find kit_agv_location)/maps/map_709_in2.yaml"/>
+  <arg name="open_rviz" default="true"/>
+  <arg name="move_forward_only" default="false"/>
+
+  <!-- kit_agv -->
+  <include file="$(find kit_agv_bringup)/launch/kit_agv_robot.launch">
+    <arg name="sensor_ip" value="$(arg sensor_ip)"/>
+    <arg name="host_ip" value="$(arg host_ip)"/>
+  </include>
+
+  <!-- Laser Odom -->
+  <include file="$(find rf2o_laser_odometry)/launch/rf2o_laser_odometry.launch"/>
+
+  <!-- Map server -->
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+
+  <!-- AMCL -->
+  <include file="$(find kit_agv_location)/launch/kit_agv_amcl.launch"/>
+
+  <!-- TF -->
+  <!-- <include file="$(find kit_agv_location)/launch/tf.launch"/> -->
+
+  <!-- rviz -->
+  <group if="$(arg open_rviz)"> 
+    <node pkg="rviz" type="rviz" name="rviz" required="true"
+          args="-d $(find kit_agv_location)/rviz/location.rviz"/>
+  </group>
+ 
+</launch>

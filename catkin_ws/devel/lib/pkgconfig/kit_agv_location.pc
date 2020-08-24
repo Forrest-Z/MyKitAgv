@@ -1,0 +1,8 @@
+prefix=/home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel
+
+Name: kit_agv_location
+Description: Description of kit_agv_location
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
