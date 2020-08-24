@@ -272,7 +272,7 @@ UBUNTU:BOOL=TRUE
 UBUNTU_XENIAL:BOOL=TRUE
 
 //Path to a file.
-_file_name:FILEPATH=/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/joint_state_publisher/joint_state_publisher/test/test_64_joint_robot.launch
+_file_name:FILEPATH=/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/webRos/rosbridge_suite-master/rosbridge_library/test/internal/test_internal.test
 
 //Path to a file.
 _gmock_INCLUDES:FILEPATH=/usr/include/gmock/gmock.h
@@ -440,6 +440,36 @@ rf2o_laser_odometry_LIB_DEPENDS:STATIC=general;/opt/ros/kinetic/lib/libtf.so;gen
 //Value Computed by CMake
 rf2o_laser_odometry_SOURCE_DIR:STATIC=/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/rf2o_laser_odometry
 
+//Value Computed by CMake
+rosapi_BINARY_DIR:STATIC=/home/nhamtung/TungNV/MyKitAgv/catkin_ws/build/webRos/rosbridge_suite-master/rosapi
+
+//Value Computed by CMake
+rosapi_SOURCE_DIR:STATIC=/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/webRos/rosbridge_suite-master/rosapi
+
+//Value Computed by CMake
+rosbridge_library_BINARY_DIR:STATIC=/home/nhamtung/TungNV/MyKitAgv/catkin_ws/build/webRos/rosbridge_suite-master/rosbridge_library
+
+//Value Computed by CMake
+rosbridge_library_SOURCE_DIR:STATIC=/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/webRos/rosbridge_suite-master/rosbridge_library
+
+//Value Computed by CMake
+rosbridge_msgs_BINARY_DIR:STATIC=/home/nhamtung/TungNV/MyKitAgv/catkin_ws/build/webRos/rosbridge_suite-master/rosbridge_msgs
+
+//Value Computed by CMake
+rosbridge_msgs_SOURCE_DIR:STATIC=/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/webRos/rosbridge_suite-master/rosbridge_msgs
+
+//Value Computed by CMake
+rosbridge_server_BINARY_DIR:STATIC=/home/nhamtung/TungNV/MyKitAgv/catkin_ws/build/webRos/rosbridge_suite-master/rosbridge_server
+
+//Value Computed by CMake
+rosbridge_server_SOURCE_DIR:STATIC=/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/webRos/rosbridge_suite-master/rosbridge_server
+
+//Value Computed by CMake
+rosbridge_suite_BINARY_DIR:STATIC=/home/nhamtung/TungNV/MyKitAgv/catkin_ws/build/webRos/rosbridge_suite-master/rosbridge_suite
+
+//Value Computed by CMake
+rosbridge_suite_SOURCE_DIR:STATIC=/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/webRos/rosbridge_suite-master/rosbridge_suite
+
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/kinetic/share/rosconsole/cmake
 
@@ -605,7 +635,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=18
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
