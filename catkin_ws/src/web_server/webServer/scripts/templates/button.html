@@ -4,8 +4,7 @@
 	<title>My first web page for ROS!</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	
-	<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"/> -->
+
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="https://static.robotwebtools.org/roslibjs/current/roslib.min.js">
 
@@ -54,10 +53,6 @@
 							<button class="mt-2 btn btn-primary" :disabled="!connected" @click="turnRight">Turn right!</button>
 							<p></p>
 							<button class="mt-2 btn btn-primary" :disabled="!connected" @click="backward">Backward!</button>
-
-<!-- 							<button class="mt-2 btn btn-primary" :disabled="!connected" @click="forward">Forward!</button>
-							<button class="mt-2 btn btn-primary" :disabled="!connected" @click="turnRight">Turn right!</button>
-							<button class="mt-2 btn btn-danger" :disabled="!connected" @click="stop">Stop!</button> -->
 						</div>
 					</div>
 				</div>
@@ -72,10 +67,7 @@
 		</div>
 	</footer>
 
-	<!-- <script src="./templates/button.js"/> -->
-	<!-- <script src="./static/button.js"/> -->
 	 <script type="text/javascript" src="{{ url_for('static', filename='js/button_control.js') }}"></script>
-	 <!-- <script type="text/javascript" src="static/button.js"/> -->
 
 </body>
 

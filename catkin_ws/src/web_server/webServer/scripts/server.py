@@ -15,6 +15,10 @@ def main_web():
 def button():
   return render_template('button.html')
 
+@app.route('/map')
+def map():
+  return render_template('map.html')
+
 @app.route('/joystick')
 def joystick():
   return render_template('joystick.html')
