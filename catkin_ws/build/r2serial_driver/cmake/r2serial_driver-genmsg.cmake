@@ -2,7 +2,7 @@
 
 message(STATUS "r2serial_driver: 1 messages, 0 services")
 
-set(MSG_I_FLAGS "-Ir2serial_driver:/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/r2serial_driver/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Ir2serial_driver:/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/r2serial_driver/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)

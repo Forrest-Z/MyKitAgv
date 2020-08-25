@@ -1,56 +1,56 @@
 
 "use strict";
 
-let ServicesForType = require('./ServicesForType.js')
-let ServiceType = require('./ServiceType.js')
 let SearchParam = require('./SearchParam.js')
-let GetTime = require('./GetTime.js')
-let Publishers = require('./Publishers.js')
-let Nodes = require('./Nodes.js')
-let MessageDetails = require('./MessageDetails.js')
-let GetParamNames = require('./GetParamNames.js')
-let Subscribers = require('./Subscribers.js')
-let ServiceNode = require('./ServiceNode.js')
-let ServiceRequestDetails = require('./ServiceRequestDetails.js')
-let ServiceResponseDetails = require('./ServiceResponseDetails.js')
 let TopicsAndRawTypes = require('./TopicsAndRawTypes.js')
-let Services = require('./Services.js')
+let Nodes = require('./Nodes.js')
+let ServiceNode = require('./ServiceNode.js')
 let Topics = require('./Topics.js')
-let ServiceHost = require('./ServiceHost.js')
-let SetParam = require('./SetParam.js')
-let NodeDetails = require('./NodeDetails.js')
-let ServiceProviders = require('./ServiceProviders.js')
+let ServiceRequestDetails = require('./ServiceRequestDetails.js')
+let GetParamNames = require('./GetParamNames.js')
 let TopicType = require('./TopicType.js')
+let NodeDetails = require('./NodeDetails.js')
+let ServiceType = require('./ServiceType.js')
 let HasParam = require('./HasParam.js')
-let TopicsForType = require('./TopicsForType.js')
+let MessageDetails = require('./MessageDetails.js')
+let ServiceHost = require('./ServiceHost.js')
+let Subscribers = require('./Subscribers.js')
+let Services = require('./Services.js')
+let ServicesForType = require('./ServicesForType.js')
+let SetParam = require('./SetParam.js')
+let ServiceResponseDetails = require('./ServiceResponseDetails.js')
+let GetTime = require('./GetTime.js')
 let DeleteParam = require('./DeleteParam.js')
 let GetActionServers = require('./GetActionServers.js')
+let Publishers = require('./Publishers.js')
+let ServiceProviders = require('./ServiceProviders.js')
 let GetParam = require('./GetParam.js')
+let TopicsForType = require('./TopicsForType.js')
 
 module.exports = {
-  ServicesForType: ServicesForType,
-  ServiceType: ServiceType,
   SearchParam: SearchParam,
-  GetTime: GetTime,
-  Publishers: Publishers,
-  Nodes: Nodes,
-  MessageDetails: MessageDetails,
-  GetParamNames: GetParamNames,
-  Subscribers: Subscribers,
-  ServiceNode: ServiceNode,
-  ServiceRequestDetails: ServiceRequestDetails,
-  ServiceResponseDetails: ServiceResponseDetails,
   TopicsAndRawTypes: TopicsAndRawTypes,
-  Services: Services,
+  Nodes: Nodes,
+  ServiceNode: ServiceNode,
   Topics: Topics,
-  ServiceHost: ServiceHost,
-  SetParam: SetParam,
-  NodeDetails: NodeDetails,
-  ServiceProviders: ServiceProviders,
+  ServiceRequestDetails: ServiceRequestDetails,
+  GetParamNames: GetParamNames,
   TopicType: TopicType,
+  NodeDetails: NodeDetails,
+  ServiceType: ServiceType,
   HasParam: HasParam,
-  TopicsForType: TopicsForType,
+  MessageDetails: MessageDetails,
+  ServiceHost: ServiceHost,
+  Subscribers: Subscribers,
+  Services: Services,
+  ServicesForType: ServicesForType,
+  SetParam: SetParam,
+  ServiceResponseDetails: ServiceResponseDetails,
+  GetTime: GetTime,
   DeleteParam: DeleteParam,
   GetActionServers: GetActionServers,
+  Publishers: Publishers,
+  ServiceProviders: ServiceProviders,
   GetParam: GetParam,
+  TopicsForType: TopicsForType,
 };

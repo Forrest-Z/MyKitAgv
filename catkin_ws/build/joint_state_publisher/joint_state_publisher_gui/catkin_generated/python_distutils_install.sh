@@ -9,7 +9,6 @@ if [ -n "$DESTDIR" ] ; then
             /bin/echo "otherwise python's distutils will bork things."
             exit 1
     esac
-    DESTDIR_ARG="--root=$DESTDIR"
 fi
 
 echo_and_run() { echo "+ $@" ; "$@" ; }
@@ -27,7 +26,8 @@ echo_and_run /usr/bin/env \
     CATKIN_BINARY_DIR="/home/nhamtung/TungNV/MyKitAgv/catkin_ws/build" \
     "/usr/bin/python2" \
     "/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/joint_state_publisher/joint_state_publisher_gui/setup.py" \
+    egg_info --egg-base /home/nhamtung/TungNV/MyKitAgv/catkin_ws/build/joint_state_publisher/joint_state_publisher_gui \
     build --build-base "/home/nhamtung/TungNV/MyKitAgv/catkin_ws/build/joint_state_publisher/joint_state_publisher_gui" \
     install \
-    $DESTDIR_ARG \
+    --root="${DESTDIR-/}" \
     --install-layout=deb --prefix="/home/nhamtung/TungNV/MyKitAgv/catkin_ws/install" --install-scripts="/home/nhamtung/TungNV/MyKitAgv/catkin_ws/install/bin"

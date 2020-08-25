@@ -73,10 +73,10 @@
   "3d7cfb7e4aa0844868966efa8a264398")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<TestArrayRequest-request>)))
   "Returns full string definition for message of type '<TestArrayRequest-request>"
-  (cl:format cl:nil "int32[] int~%~%~%"))
+  (cl:format cl:nil "int32[] int~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'TestArrayRequest-request)))
   "Returns full string definition for message of type 'TestArrayRequest-request"
-  (cl:format cl:nil "int32[] int~%~%~%"))
+  (cl:format cl:nil "int32[] int~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <TestArrayRequest-request>))
   (cl:+ 0
      4 (cl:reduce #'cl:+ (cl:slot-value msg 'int) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 4)))

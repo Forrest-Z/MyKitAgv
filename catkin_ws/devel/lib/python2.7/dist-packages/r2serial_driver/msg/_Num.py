@@ -9,7 +9,7 @@ import struct
 class Num(genpy.Message):
   _md5sum = "137910bf2ef85fa95265084c3edcdb56"
   _type = "r2serial_driver/Num"
-  _has_header = False #flag to mark the presence of a Header object
+  _has_header = False  # flag to mark the presence of a Header object
   _full_text = """uint8 RMID
 uint8 TMID 
 uint8 ID
@@ -40,7 +40,7 @@ uint8 Sum
     """
     if args or kwds:
       super(Num, self).__init__(*args, **kwds)
-      #message fields cannot be None, assign default values for those that are
+      # message fields cannot be None, assign default values for those that are
       if self.RMID is None:
         self.RMID = 0
       if self.TMID is None:
@@ -97,7 +97,7 @@ uint8 Sum
       (_x.RMID, _x.TMID, _x.ID, _x.PID, _x.DataNum, _x.Dta_Low, _x.Dta_High, _x.Sum,) = _get_struct_8B().unpack(str[start:end])
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e) #most likely buffer underfill
+      raise genpy.DeserializationError(e)  # most likely buffer underfill
 
 
   def serialize_numpy(self, buff, numpy):
@@ -126,7 +126,7 @@ uint8 Sum
       (_x.RMID, _x.TMID, _x.ID, _x.PID, _x.DataNum, _x.Dta_Low, _x.Dta_High, _x.Sum,) = _get_struct_8B().unpack(str[start:end])
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e) #most likely buffer underfill
+      raise genpy.DeserializationError(e)  # most likely buffer underfill
 
 _struct_I = genpy.struct_I
 def _get_struct_I():

@@ -61,6 +61,20 @@ ros::message_operations::Printer< ::rosapi::ServiceResponseDetailsRequest_<Conta
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::rosapi::ServiceResponseDetailsRequest_<ContainerAllocator1> & lhs, const ::rosapi::ServiceResponseDetailsRequest_<ContainerAllocator2> & rhs)
+{
+  return lhs.type == rhs.type;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::rosapi::ServiceResponseDetailsRequest_<ContainerAllocator1> & lhs, const ::rosapi::ServiceResponseDetailsRequest_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace rosapi
 
 namespace ros
@@ -68,12 +82,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'rosapi': ['/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/web_server/rosbridge_suite-master/rosapi/msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -138,8 +146,8 @@ struct Definition< ::rosapi::ServiceResponseDetailsRequest_<ContainerAllocator> 
 {
   static const char* value()
   {
-    return "string type\n\
-";
+    return "string type\n"
+;
   }
 
   static const char* value(const ::rosapi::ServiceResponseDetailsRequest_<ContainerAllocator>&) { return value(); }

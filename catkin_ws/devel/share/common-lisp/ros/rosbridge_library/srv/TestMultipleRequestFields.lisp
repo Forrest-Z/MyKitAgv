@@ -116,10 +116,10 @@
   "6cce9fb727dd0f31d504d7d198a1f4ef")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<TestMultipleRequestFields-request>)))
   "Returns full string definition for message of type '<TestMultipleRequestFields-request>"
-  (cl:format cl:nil "int32 int~%float32 float~%string string~%bool bool~%~%~%"))
+  (cl:format cl:nil "int32 int~%float32 float~%string string~%bool bool~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'TestMultipleRequestFields-request)))
   "Returns full string definition for message of type 'TestMultipleRequestFields-request"
-  (cl:format cl:nil "int32 int~%float32 float~%string string~%bool bool~%~%~%"))
+  (cl:format cl:nil "int32 int~%float32 float~%string string~%bool bool~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <TestMultipleRequestFields-request>))
   (cl:+ 0
      4
