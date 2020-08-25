@@ -68,21 +68,6 @@ ros::message_operations::Printer< ::sick_safetyscanners::ApplicationDataMsg_<Con
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::sick_safetyscanners::ApplicationDataMsg_<ContainerAllocator1> & lhs, const ::sick_safetyscanners::ApplicationDataMsg_<ContainerAllocator2> & rhs)
-{
-  return lhs.inputs == rhs.inputs &&
-    lhs.outputs == rhs.outputs;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::sick_safetyscanners::ApplicationDataMsg_<ContainerAllocator1> & lhs, const ::sick_safetyscanners::ApplicationDataMsg_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace sick_safetyscanners
 
 namespace ros
@@ -90,6 +75,12 @@ namespace ros
 namespace message_traits
 {
 
+
+
+// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'geometry_msgs': ['/opt/ros/kinetic/share/geometry_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/kinetic/share/sensor_msgs/cmake/../msg'], 'sick_safetyscanners': ['/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/sick_safetyscanners-master/msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -154,62 +145,62 @@ struct Definition< ::sick_safetyscanners::ApplicationDataMsg_<ContainerAllocator
 {
   static const char* value()
   {
-    return "ApplicationInputsMsg inputs\n"
-"ApplicationOutputsMsg outputs\n"
-"\n"
-"================================================================================\n"
-"MSG: sick_safetyscanners/ApplicationInputsMsg\n"
-"bool[] unsafe_inputs_input_sources\n"
-"bool[] unsafe_inputs_flags\n"
-"\n"
-"uint16[] monitoring_case_number_inputs\n"
-"bool[] monitoring_case_number_inputs_flags\n"
-"\n"
-"int16 linear_velocity_inputs_velocity_0\n"
-"bool linear_velocity_inputs_velocity_0_valid\n"
-"bool linear_velocity_inputs_velocity_0_transmitted_safely\n"
-"\n"
-"int16 linear_velocity_inputs_velocity_1\n"
-"bool linear_velocity_inputs_velocity_1_valid\n"
-"bool linear_velocity_inputs_velocity_1_transmitted_safely\n"
-"\n"
-"uint8 sleep_mode_input\n"
-"\n"
-"\n"
-"================================================================================\n"
-"MSG: sick_safetyscanners/ApplicationOutputsMsg\n"
-"bool[] evaluation_path_outputs_eval_out\n"
-"bool[] evaluation_path_outputs_is_safe\n"
-"bool[] evaluation_path_outputs_is_valid\n"
-"\n"
-"uint16[] monitoring_case_number_outputs \n"
-"bool[] monitoring_case_number_outputs_flags\n"
-"\n"
-"uint8 sleep_mode_output\n"
-"bool sleep_mode_output_valid\n"
-"\n"
-"bool error_flag_contamination_warning\n"
-"bool error_flag_contamination_error\n"
-"bool error_flag_manipulation_error\n"
-"bool error_flag_glare\n"
-"bool error_flag_reference_contour_intruded\n"
-"bool error_flag_critical_error\n"
-"bool error_flags_are_valid\n"
-"\n"
-"\n"
-"int16 linear_velocity_outputs_velocity_0\n"
-"bool linear_velocity_outputs_velocity_0_valid\n"
-"bool linear_velocity_outputs_velocity_0_transmitted_safely\n"
-"\n"
-"int16 linear_velocity_outputs_velocity_1\n"
-"bool linear_velocity_outputs_velocity_1_valid\n"
-"bool linear_velocity_outputs_velocity_1_transmitted_safely\n"
-"\n"
-"int16[] resulting_velocity\n"
-"bool[] resulting_velocity_flags\n"
-"\n"
-" \n"
-;
+    return "ApplicationInputsMsg inputs\n\
+ApplicationOutputsMsg outputs\n\
+\n\
+================================================================================\n\
+MSG: sick_safetyscanners/ApplicationInputsMsg\n\
+bool[] unsafe_inputs_input_sources\n\
+bool[] unsafe_inputs_flags\n\
+\n\
+uint16[] monitoring_case_number_inputs\n\
+bool[] monitoring_case_number_inputs_flags\n\
+\n\
+int16 linear_velocity_inputs_velocity_0\n\
+bool linear_velocity_inputs_velocity_0_valid\n\
+bool linear_velocity_inputs_velocity_0_transmitted_safely\n\
+\n\
+int16 linear_velocity_inputs_velocity_1\n\
+bool linear_velocity_inputs_velocity_1_valid\n\
+bool linear_velocity_inputs_velocity_1_transmitted_safely\n\
+\n\
+uint8 sleep_mode_input\n\
+\n\
+\n\
+================================================================================\n\
+MSG: sick_safetyscanners/ApplicationOutputsMsg\n\
+bool[] evaluation_path_outputs_eval_out\n\
+bool[] evaluation_path_outputs_is_safe\n\
+bool[] evaluation_path_outputs_is_valid\n\
+\n\
+uint16[] monitoring_case_number_outputs \n\
+bool[] monitoring_case_number_outputs_flags\n\
+\n\
+uint8 sleep_mode_output\n\
+bool sleep_mode_output_valid\n\
+\n\
+bool error_flag_contamination_warning\n\
+bool error_flag_contamination_error\n\
+bool error_flag_manipulation_error\n\
+bool error_flag_glare\n\
+bool error_flag_reference_contour_intruded\n\
+bool error_flag_critical_error\n\
+bool error_flags_are_valid\n\
+\n\
+\n\
+int16 linear_velocity_outputs_velocity_0\n\
+bool linear_velocity_outputs_velocity_0_valid\n\
+bool linear_velocity_outputs_velocity_0_transmitted_safely\n\
+\n\
+int16 linear_velocity_outputs_velocity_1\n\
+bool linear_velocity_outputs_velocity_1_valid\n\
+bool linear_velocity_outputs_velocity_1_transmitted_safely\n\
+\n\
+int16[] resulting_velocity\n\
+bool[] resulting_velocity_flags\n\
+\n\
+ \n\
+";
   }
 
   static const char* value(const ::sick_safetyscanners::ApplicationDataMsg_<ContainerAllocator>&) { return value(); }

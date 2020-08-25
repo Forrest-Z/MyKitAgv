@@ -111,30 +111,6 @@ ros::message_operations::Printer< ::sick_safetyscanners::DataHeaderMsg_<Containe
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::sick_safetyscanners::DataHeaderMsg_<ContainerAllocator1> & lhs, const ::sick_safetyscanners::DataHeaderMsg_<ContainerAllocator2> & rhs)
-{
-  return lhs.version_version == rhs.version_version &&
-    lhs.version_major_version == rhs.version_major_version &&
-    lhs.version_minor_version == rhs.version_minor_version &&
-    lhs.version_release == rhs.version_release &&
-    lhs.serial_number_of_device == rhs.serial_number_of_device &&
-    lhs.serial_number_of_channel_plug == rhs.serial_number_of_channel_plug &&
-    lhs.channel_number == rhs.channel_number &&
-    lhs.sequence_number == rhs.sequence_number &&
-    lhs.scan_number == rhs.scan_number &&
-    lhs.timestamp_date == rhs.timestamp_date &&
-    lhs.timestamp_time == rhs.timestamp_time;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::sick_safetyscanners::DataHeaderMsg_<ContainerAllocator1> & lhs, const ::sick_safetyscanners::DataHeaderMsg_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace sick_safetyscanners
 
 namespace ros
@@ -142,6 +118,12 @@ namespace ros
 namespace message_traits
 {
 
+
+
+// BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'geometry_msgs': ['/opt/ros/kinetic/share/geometry_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/kinetic/share/sensor_msgs/cmake/../msg'], 'sick_safetyscanners': ['/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/sick_safetyscanners-master/msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -206,21 +188,21 @@ struct Definition< ::sick_safetyscanners::DataHeaderMsg_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "uint8 version_version\n"
-"uint8 version_major_version\n"
-"uint8 version_minor_version\n"
-"uint8 version_release\n"
-"\n"
-"uint32 serial_number_of_device\n"
-"uint32 serial_number_of_channel_plug\n"
-"uint8 channel_number\n"
-"\n"
-"uint32 sequence_number\n"
-"uint32 scan_number\n"
-"\n"
-"uint16 timestamp_date\n"
-"uint32 timestamp_time\n"
-;
+    return "uint8 version_version\n\
+uint8 version_major_version\n\
+uint8 version_minor_version\n\
+uint8 version_release\n\
+\n\
+uint32 serial_number_of_device\n\
+uint32 serial_number_of_channel_plug\n\
+uint8 channel_number\n\
+\n\
+uint32 sequence_number\n\
+uint32 scan_number\n\
+\n\
+uint16 timestamp_date\n\
+uint32 timestamp_time\n\
+";
   }
 
   static const char* value(const ::sick_safetyscanners::DataHeaderMsg_<ContainerAllocator>&) { return value(); }

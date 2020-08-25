@@ -76,23 +76,6 @@ ros::message_operations::Printer< ::sick_safetyscanners::OutputPathsMsg_<Contain
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::sick_safetyscanners::OutputPathsMsg_<ContainerAllocator1> & lhs, const ::sick_safetyscanners::OutputPathsMsg_<ContainerAllocator2> & rhs)
-{
-  return lhs.status == rhs.status &&
-    lhs.is_safe == rhs.is_safe &&
-    lhs.is_valid == rhs.is_valid &&
-    lhs.active_monitoring_case == rhs.active_monitoring_case;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::sick_safetyscanners::OutputPathsMsg_<ContainerAllocator1> & lhs, const ::sick_safetyscanners::OutputPathsMsg_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace sick_safetyscanners
 
 namespace ros
@@ -100,6 +83,12 @@ namespace ros
 namespace message_traits
 {
 
+
+
+// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'geometry_msgs': ['/opt/ros/kinetic/share/geometry_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/kinetic/share/sensor_msgs/cmake/../msg'], 'sick_safetyscanners': ['/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/sick_safetyscanners-master/msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -164,11 +153,11 @@ struct Definition< ::sick_safetyscanners::OutputPathsMsg_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "bool[] status\n"
-"bool[] is_safe\n"
-"bool[] is_valid\n"
-"int32 active_monitoring_case\n"
-;
+    return "bool[] status\n\
+bool[] is_safe\n\
+bool[] is_valid\n\
+int32 active_monitoring_case\n\
+";
   }
 
   static const char* value(const ::sick_safetyscanners::OutputPathsMsg_<ContainerAllocator>&) { return value(); }

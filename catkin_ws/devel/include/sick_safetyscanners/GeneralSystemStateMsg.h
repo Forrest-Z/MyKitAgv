@@ -131,34 +131,6 @@ ros::message_operations::Printer< ::sick_safetyscanners::GeneralSystemStateMsg_<
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::sick_safetyscanners::GeneralSystemStateMsg_<ContainerAllocator1> & lhs, const ::sick_safetyscanners::GeneralSystemStateMsg_<ContainerAllocator2> & rhs)
-{
-  return lhs.run_mode_active == rhs.run_mode_active &&
-    lhs.standby_mode_active == rhs.standby_mode_active &&
-    lhs.contamination_warning == rhs.contamination_warning &&
-    lhs.contamination_error == rhs.contamination_error &&
-    lhs.reference_contour_status == rhs.reference_contour_status &&
-    lhs.manipulation_status == rhs.manipulation_status &&
-    lhs.safe_cut_off_path == rhs.safe_cut_off_path &&
-    lhs.non_safe_cut_off_path == rhs.non_safe_cut_off_path &&
-    lhs.reset_required_cut_off_path == rhs.reset_required_cut_off_path &&
-    lhs.current_monitoring_case_no_table_1 == rhs.current_monitoring_case_no_table_1 &&
-    lhs.current_monitoring_case_no_table_2 == rhs.current_monitoring_case_no_table_2 &&
-    lhs.current_monitoring_case_no_table_3 == rhs.current_monitoring_case_no_table_3 &&
-    lhs.current_monitoring_case_no_table_4 == rhs.current_monitoring_case_no_table_4 &&
-    lhs.application_error == rhs.application_error &&
-    lhs.device_error == rhs.device_error;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::sick_safetyscanners::GeneralSystemStateMsg_<ContainerAllocator1> & lhs, const ::sick_safetyscanners::GeneralSystemStateMsg_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace sick_safetyscanners
 
 namespace ros
@@ -166,6 +138,12 @@ namespace ros
 namespace message_traits
 {
 
+
+
+// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'geometry_msgs': ['/opt/ros/kinetic/share/geometry_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/kinetic/share/sensor_msgs/cmake/../msg'], 'sick_safetyscanners': ['/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/sick_safetyscanners-master/msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -230,25 +208,25 @@ struct Definition< ::sick_safetyscanners::GeneralSystemStateMsg_<ContainerAlloca
 {
   static const char* value()
   {
-    return "bool run_mode_active\n"
-"bool standby_mode_active\n"
-"bool contamination_warning\n"
-"bool contamination_error\n"
-"bool reference_contour_status\n"
-"bool manipulation_status\n"
-"\n"
-"bool[] safe_cut_off_path\n"
-"bool[] non_safe_cut_off_path\n"
-"bool[] reset_required_cut_off_path\n"
-"\n"
-"uint8 current_monitoring_case_no_table_1\n"
-"uint8 current_monitoring_case_no_table_2\n"
-"uint8 current_monitoring_case_no_table_3\n"
-"uint8 current_monitoring_case_no_table_4\n"
-"\n"
-"bool application_error\n"
-"bool device_error\n"
-;
+    return "bool run_mode_active\n\
+bool standby_mode_active\n\
+bool contamination_warning\n\
+bool contamination_error\n\
+bool reference_contour_status\n\
+bool manipulation_status\n\
+\n\
+bool[] safe_cut_off_path\n\
+bool[] non_safe_cut_off_path\n\
+bool[] reset_required_cut_off_path\n\
+\n\
+uint8 current_monitoring_case_no_table_1\n\
+uint8 current_monitoring_case_no_table_2\n\
+uint8 current_monitoring_case_no_table_3\n\
+uint8 current_monitoring_case_no_table_4\n\
+\n\
+bool application_error\n\
+bool device_error\n\
+";
   }
 
   static const char* value(const ::sick_safetyscanners::GeneralSystemStateMsg_<ContainerAllocator>&) { return value(); }

@@ -57,8 +57,8 @@ struct DataType< ::sick_safetyscanners::FieldData > {
 };
 
 
-// service_traits::MD5Sum< ::sick_safetyscanners::FieldDataRequest> should match
-// service_traits::MD5Sum< ::sick_safetyscanners::FieldData >
+// service_traits::MD5Sum< ::sick_safetyscanners::FieldDataRequest> should match 
+// service_traits::MD5Sum< ::sick_safetyscanners::FieldData > 
 template<>
 struct MD5Sum< ::sick_safetyscanners::FieldDataRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::sick_safetyscanners::FieldDataRequest>
   }
 };
 
-// service_traits::DataType< ::sick_safetyscanners::FieldDataRequest> should match
-// service_traits::DataType< ::sick_safetyscanners::FieldData >
+// service_traits::DataType< ::sick_safetyscanners::FieldDataRequest> should match 
+// service_traits::DataType< ::sick_safetyscanners::FieldData > 
 template<>
 struct DataType< ::sick_safetyscanners::FieldDataRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::sick_safetyscanners::FieldDataRequest>
   }
 };
 
-// service_traits::MD5Sum< ::sick_safetyscanners::FieldDataResponse> should match
-// service_traits::MD5Sum< ::sick_safetyscanners::FieldData >
+// service_traits::MD5Sum< ::sick_safetyscanners::FieldDataResponse> should match 
+// service_traits::MD5Sum< ::sick_safetyscanners::FieldData > 
 template<>
 struct MD5Sum< ::sick_safetyscanners::FieldDataResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::sick_safetyscanners::FieldDataResponse>
   }
 };
 
-// service_traits::DataType< ::sick_safetyscanners::FieldDataResponse> should match
-// service_traits::DataType< ::sick_safetyscanners::FieldData >
+// service_traits::DataType< ::sick_safetyscanners::FieldDataResponse> should match 
+// service_traits::DataType< ::sick_safetyscanners::FieldData > 
 template<>
 struct DataType< ::sick_safetyscanners::FieldDataResponse>
 {

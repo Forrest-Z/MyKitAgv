@@ -9,6 +9,7 @@ if [ -n "$DESTDIR" ] ; then
             /bin/echo "otherwise python's distutils will bork things."
             exit 1
     esac
+    DESTDIR_ARG="--root=$DESTDIR"
 fi
 
 echo_and_run() { echo "+ $@" ; "$@" ; }
@@ -26,8 +27,7 @@ echo_and_run /usr/bin/env \
     CATKIN_BINARY_DIR="/home/nhamtung/TungNV/MyKitAgv/catkin_ws/build" \
     "/usr/bin/python2" \
     "/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/web_server/rosbridge_suite-master/rosbridge_server/setup.py" \
-     \
     build --build-base "/home/nhamtung/TungNV/MyKitAgv/catkin_ws/build/web_server/rosbridge_suite-master/rosbridge_server" \
     install \
-    --root="${DESTDIR-/}" \
+    $DESTDIR_ARG \
     --install-layout=deb --prefix="/home/nhamtung/TungNV/MyKitAgv/catkin_ws/install" --install-scripts="/home/nhamtung/TungNV/MyKitAgv/catkin_ws/install/bin"

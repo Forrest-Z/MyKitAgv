@@ -111,30 +111,6 @@ ros::message_operations::Printer< ::sick_safetyscanners::ApplicationInputsMsg_<C
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::sick_safetyscanners::ApplicationInputsMsg_<ContainerAllocator1> & lhs, const ::sick_safetyscanners::ApplicationInputsMsg_<ContainerAllocator2> & rhs)
-{
-  return lhs.unsafe_inputs_input_sources == rhs.unsafe_inputs_input_sources &&
-    lhs.unsafe_inputs_flags == rhs.unsafe_inputs_flags &&
-    lhs.monitoring_case_number_inputs == rhs.monitoring_case_number_inputs &&
-    lhs.monitoring_case_number_inputs_flags == rhs.monitoring_case_number_inputs_flags &&
-    lhs.linear_velocity_inputs_velocity_0 == rhs.linear_velocity_inputs_velocity_0 &&
-    lhs.linear_velocity_inputs_velocity_0_valid == rhs.linear_velocity_inputs_velocity_0_valid &&
-    lhs.linear_velocity_inputs_velocity_0_transmitted_safely == rhs.linear_velocity_inputs_velocity_0_transmitted_safely &&
-    lhs.linear_velocity_inputs_velocity_1 == rhs.linear_velocity_inputs_velocity_1 &&
-    lhs.linear_velocity_inputs_velocity_1_valid == rhs.linear_velocity_inputs_velocity_1_valid &&
-    lhs.linear_velocity_inputs_velocity_1_transmitted_safely == rhs.linear_velocity_inputs_velocity_1_transmitted_safely &&
-    lhs.sleep_mode_input == rhs.sleep_mode_input;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::sick_safetyscanners::ApplicationInputsMsg_<ContainerAllocator1> & lhs, const ::sick_safetyscanners::ApplicationInputsMsg_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace sick_safetyscanners
 
 namespace ros
@@ -142,6 +118,12 @@ namespace ros
 namespace message_traits
 {
 
+
+
+// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'geometry_msgs': ['/opt/ros/kinetic/share/geometry_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/kinetic/share/sensor_msgs/cmake/../msg'], 'sick_safetyscanners': ['/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/sick_safetyscanners-master/msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -206,23 +188,23 @@ struct Definition< ::sick_safetyscanners::ApplicationInputsMsg_<ContainerAllocat
 {
   static const char* value()
   {
-    return "bool[] unsafe_inputs_input_sources\n"
-"bool[] unsafe_inputs_flags\n"
-"\n"
-"uint16[] monitoring_case_number_inputs\n"
-"bool[] monitoring_case_number_inputs_flags\n"
-"\n"
-"int16 linear_velocity_inputs_velocity_0\n"
-"bool linear_velocity_inputs_velocity_0_valid\n"
-"bool linear_velocity_inputs_velocity_0_transmitted_safely\n"
-"\n"
-"int16 linear_velocity_inputs_velocity_1\n"
-"bool linear_velocity_inputs_velocity_1_valid\n"
-"bool linear_velocity_inputs_velocity_1_transmitted_safely\n"
-"\n"
-"uint8 sleep_mode_input\n"
-"\n"
-;
+    return "bool[] unsafe_inputs_input_sources\n\
+bool[] unsafe_inputs_flags\n\
+\n\
+uint16[] monitoring_case_number_inputs\n\
+bool[] monitoring_case_number_inputs_flags\n\
+\n\
+int16 linear_velocity_inputs_velocity_0\n\
+bool linear_velocity_inputs_velocity_0_valid\n\
+bool linear_velocity_inputs_velocity_0_transmitted_safely\n\
+\n\
+int16 linear_velocity_inputs_velocity_1\n\
+bool linear_velocity_inputs_velocity_1_valid\n\
+bool linear_velocity_inputs_velocity_1_transmitted_safely\n\
+\n\
+uint8 sleep_mode_input\n\
+\n\
+";
   }
 
   static const char* value(const ::sick_safetyscanners::ApplicationInputsMsg_<ContainerAllocator>&) { return value(); }

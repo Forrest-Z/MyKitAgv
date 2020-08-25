@@ -5,7 +5,7 @@ services_str = "/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/web_server/rosbridg
 pkg_name = "rosbridge_library"
 dependencies_str = "std_msgs;geometry_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"
-dep_include_paths_str = "rosbridge_library;/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/web_server/rosbridge_suite-master/rosbridge_library/msg;std_msgs;/opt/ros/melodic/share/std_msgs/cmake/../msg;geometry_msgs;/opt/ros/melodic/share/geometry_msgs/cmake/../msg"
+dep_include_paths_str = "rosbridge_library;/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/web_server/rosbridge_suite-master/rosbridge_library/msg;std_msgs;/opt/ros/kinetic/share/std_msgs/cmake/../msg;geometry_msgs;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg"
 PYTHON_EXECUTABLE = "/usr/bin/python2"
 package_has_static_sources = 'TRUE' == 'TRUE'
-genmsg_check_deps_script = "/opt/ros/melodic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py"
+genmsg_check_deps_script = "/opt/ros/kinetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py"

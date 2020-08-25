@@ -92,25 +92,6 @@ ros::message_operations::Printer< ::sick_safetyscanners::RawMicroScanDataMsg_<Co
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::sick_safetyscanners::RawMicroScanDataMsg_<ContainerAllocator1> & lhs, const ::sick_safetyscanners::RawMicroScanDataMsg_<ContainerAllocator2> & rhs)
-{
-  return lhs.header == rhs.header &&
-    lhs.derived_values == rhs.derived_values &&
-    lhs.general_system_state == rhs.general_system_state &&
-    lhs.measurement_data == rhs.measurement_data &&
-    lhs.intrusion_data == rhs.intrusion_data &&
-    lhs.application_data == rhs.application_data;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::sick_safetyscanners::RawMicroScanDataMsg_<ContainerAllocator1> & lhs, const ::sick_safetyscanners::RawMicroScanDataMsg_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace sick_safetyscanners
 
 namespace ros
@@ -118,6 +99,12 @@ namespace ros
 namespace message_traits
 {
 
+
+
+// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'geometry_msgs': ['/opt/ros/kinetic/share/geometry_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/kinetic/share/sensor_msgs/cmake/../msg'], 'sick_safetyscanners': ['/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/sick_safetyscanners-master/msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -182,145 +169,145 @@ struct Definition< ::sick_safetyscanners::RawMicroScanDataMsg_<ContainerAllocato
 {
   static const char* value()
   {
-    return "DataHeaderMsg header\n"
-"DerivedValuesMsg derived_values\n"
-"GeneralSystemStateMsg general_system_state\n"
-"MeasurementDataMsg measurement_data\n"
-"IntrusionDataMsg intrusion_data\n"
-"ApplicationDataMsg application_data\n"
-"\n"
-"================================================================================\n"
-"MSG: sick_safetyscanners/DataHeaderMsg\n"
-"uint8 version_version\n"
-"uint8 version_major_version\n"
-"uint8 version_minor_version\n"
-"uint8 version_release\n"
-"\n"
-"uint32 serial_number_of_device\n"
-"uint32 serial_number_of_channel_plug\n"
-"uint8 channel_number\n"
-"\n"
-"uint32 sequence_number\n"
-"uint32 scan_number\n"
-"\n"
-"uint16 timestamp_date\n"
-"uint32 timestamp_time\n"
-"\n"
-"================================================================================\n"
-"MSG: sick_safetyscanners/DerivedValuesMsg\n"
-"uint16 multiplication_factor\n"
-"uint16 number_of_beams\n"
-"uint16 scan_time\n"
-"float32 start_angle\n"
-"float32 angular_beam_resolution\n"
-"uint32 interbeam_period\n"
-"\n"
-"================================================================================\n"
-"MSG: sick_safetyscanners/GeneralSystemStateMsg\n"
-"bool run_mode_active\n"
-"bool standby_mode_active\n"
-"bool contamination_warning\n"
-"bool contamination_error\n"
-"bool reference_contour_status\n"
-"bool manipulation_status\n"
-"\n"
-"bool[] safe_cut_off_path\n"
-"bool[] non_safe_cut_off_path\n"
-"bool[] reset_required_cut_off_path\n"
-"\n"
-"uint8 current_monitoring_case_no_table_1\n"
-"uint8 current_monitoring_case_no_table_2\n"
-"uint8 current_monitoring_case_no_table_3\n"
-"uint8 current_monitoring_case_no_table_4\n"
-"\n"
-"bool application_error\n"
-"bool device_error\n"
-"\n"
-"================================================================================\n"
-"MSG: sick_safetyscanners/MeasurementDataMsg\n"
-"uint32 number_of_beams\n"
-"ScanPointMsg[] scan_points\n"
-"\n"
-"\n"
-"================================================================================\n"
-"MSG: sick_safetyscanners/ScanPointMsg\n"
-"float32 angle\n"
-"uint16 distance\n"
-"uint8 reflectivity\n"
-"bool valid\n"
-"bool infinite\n"
-"bool glare\n"
-"bool reflector\n"
-"bool contamination\n"
-"bool contamination_warning\n"
-"\n"
-"================================================================================\n"
-"MSG: sick_safetyscanners/IntrusionDataMsg\n"
-"IntrusionDatumMsg[] data\n"
-"\n"
-"================================================================================\n"
-"MSG: sick_safetyscanners/IntrusionDatumMsg\n"
-"uint32 size\n"
-"bool[] flags\n"
-"\n"
-"================================================================================\n"
-"MSG: sick_safetyscanners/ApplicationDataMsg\n"
-"ApplicationInputsMsg inputs\n"
-"ApplicationOutputsMsg outputs\n"
-"\n"
-"================================================================================\n"
-"MSG: sick_safetyscanners/ApplicationInputsMsg\n"
-"bool[] unsafe_inputs_input_sources\n"
-"bool[] unsafe_inputs_flags\n"
-"\n"
-"uint16[] monitoring_case_number_inputs\n"
-"bool[] monitoring_case_number_inputs_flags\n"
-"\n"
-"int16 linear_velocity_inputs_velocity_0\n"
-"bool linear_velocity_inputs_velocity_0_valid\n"
-"bool linear_velocity_inputs_velocity_0_transmitted_safely\n"
-"\n"
-"int16 linear_velocity_inputs_velocity_1\n"
-"bool linear_velocity_inputs_velocity_1_valid\n"
-"bool linear_velocity_inputs_velocity_1_transmitted_safely\n"
-"\n"
-"uint8 sleep_mode_input\n"
-"\n"
-"\n"
-"================================================================================\n"
-"MSG: sick_safetyscanners/ApplicationOutputsMsg\n"
-"bool[] evaluation_path_outputs_eval_out\n"
-"bool[] evaluation_path_outputs_is_safe\n"
-"bool[] evaluation_path_outputs_is_valid\n"
-"\n"
-"uint16[] monitoring_case_number_outputs \n"
-"bool[] monitoring_case_number_outputs_flags\n"
-"\n"
-"uint8 sleep_mode_output\n"
-"bool sleep_mode_output_valid\n"
-"\n"
-"bool error_flag_contamination_warning\n"
-"bool error_flag_contamination_error\n"
-"bool error_flag_manipulation_error\n"
-"bool error_flag_glare\n"
-"bool error_flag_reference_contour_intruded\n"
-"bool error_flag_critical_error\n"
-"bool error_flags_are_valid\n"
-"\n"
-"\n"
-"int16 linear_velocity_outputs_velocity_0\n"
-"bool linear_velocity_outputs_velocity_0_valid\n"
-"bool linear_velocity_outputs_velocity_0_transmitted_safely\n"
-"\n"
-"int16 linear_velocity_outputs_velocity_1\n"
-"bool linear_velocity_outputs_velocity_1_valid\n"
-"bool linear_velocity_outputs_velocity_1_transmitted_safely\n"
-"\n"
-"int16[] resulting_velocity\n"
-"bool[] resulting_velocity_flags\n"
-"\n"
-" \n"
-;
+    return "DataHeaderMsg header\n\
+DerivedValuesMsg derived_values\n\
+GeneralSystemStateMsg general_system_state\n\
+MeasurementDataMsg measurement_data\n\
+IntrusionDataMsg intrusion_data\n\
+ApplicationDataMsg application_data\n\
+\n\
+================================================================================\n\
+MSG: sick_safetyscanners/DataHeaderMsg\n\
+uint8 version_version\n\
+uint8 version_major_version\n\
+uint8 version_minor_version\n\
+uint8 version_release\n\
+\n\
+uint32 serial_number_of_device\n\
+uint32 serial_number_of_channel_plug\n\
+uint8 channel_number\n\
+\n\
+uint32 sequence_number\n\
+uint32 scan_number\n\
+\n\
+uint16 timestamp_date\n\
+uint32 timestamp_time\n\
+\n\
+================================================================================\n\
+MSG: sick_safetyscanners/DerivedValuesMsg\n\
+uint16 multiplication_factor\n\
+uint16 number_of_beams\n\
+uint16 scan_time\n\
+float32 start_angle\n\
+float32 angular_beam_resolution\n\
+uint32 interbeam_period\n\
+\n\
+================================================================================\n\
+MSG: sick_safetyscanners/GeneralSystemStateMsg\n\
+bool run_mode_active\n\
+bool standby_mode_active\n\
+bool contamination_warning\n\
+bool contamination_error\n\
+bool reference_contour_status\n\
+bool manipulation_status\n\
+\n\
+bool[] safe_cut_off_path\n\
+bool[] non_safe_cut_off_path\n\
+bool[] reset_required_cut_off_path\n\
+\n\
+uint8 current_monitoring_case_no_table_1\n\
+uint8 current_monitoring_case_no_table_2\n\
+uint8 current_monitoring_case_no_table_3\n\
+uint8 current_monitoring_case_no_table_4\n\
+\n\
+bool application_error\n\
+bool device_error\n\
+\n\
+================================================================================\n\
+MSG: sick_safetyscanners/MeasurementDataMsg\n\
+uint32 number_of_beams\n\
+ScanPointMsg[] scan_points\n\
+\n\
+\n\
+================================================================================\n\
+MSG: sick_safetyscanners/ScanPointMsg\n\
+float32 angle\n\
+uint16 distance\n\
+uint8 reflectivity\n\
+bool valid\n\
+bool infinite\n\
+bool glare\n\
+bool reflector\n\
+bool contamination\n\
+bool contamination_warning\n\
+\n\
+================================================================================\n\
+MSG: sick_safetyscanners/IntrusionDataMsg\n\
+IntrusionDatumMsg[] data\n\
+\n\
+================================================================================\n\
+MSG: sick_safetyscanners/IntrusionDatumMsg\n\
+uint32 size\n\
+bool[] flags\n\
+\n\
+================================================================================\n\
+MSG: sick_safetyscanners/ApplicationDataMsg\n\
+ApplicationInputsMsg inputs\n\
+ApplicationOutputsMsg outputs\n\
+\n\
+================================================================================\n\
+MSG: sick_safetyscanners/ApplicationInputsMsg\n\
+bool[] unsafe_inputs_input_sources\n\
+bool[] unsafe_inputs_flags\n\
+\n\
+uint16[] monitoring_case_number_inputs\n\
+bool[] monitoring_case_number_inputs_flags\n\
+\n\
+int16 linear_velocity_inputs_velocity_0\n\
+bool linear_velocity_inputs_velocity_0_valid\n\
+bool linear_velocity_inputs_velocity_0_transmitted_safely\n\
+\n\
+int16 linear_velocity_inputs_velocity_1\n\
+bool linear_velocity_inputs_velocity_1_valid\n\
+bool linear_velocity_inputs_velocity_1_transmitted_safely\n\
+\n\
+uint8 sleep_mode_input\n\
+\n\
+\n\
+================================================================================\n\
+MSG: sick_safetyscanners/ApplicationOutputsMsg\n\
+bool[] evaluation_path_outputs_eval_out\n\
+bool[] evaluation_path_outputs_is_safe\n\
+bool[] evaluation_path_outputs_is_valid\n\
+\n\
+uint16[] monitoring_case_number_outputs \n\
+bool[] monitoring_case_number_outputs_flags\n\
+\n\
+uint8 sleep_mode_output\n\
+bool sleep_mode_output_valid\n\
+\n\
+bool error_flag_contamination_warning\n\
+bool error_flag_contamination_error\n\
+bool error_flag_manipulation_error\n\
+bool error_flag_glare\n\
+bool error_flag_reference_contour_intruded\n\
+bool error_flag_critical_error\n\
+bool error_flags_are_valid\n\
+\n\
+\n\
+int16 linear_velocity_outputs_velocity_0\n\
+bool linear_velocity_outputs_velocity_0_valid\n\
+bool linear_velocity_outputs_velocity_0_transmitted_safely\n\
+\n\
+int16 linear_velocity_outputs_velocity_1\n\
+bool linear_velocity_outputs_velocity_1_valid\n\
+bool linear_velocity_outputs_velocity_1_transmitted_safely\n\
+\n\
+int16[] resulting_velocity\n\
+bool[] resulting_velocity_flags\n\
+\n\
+ \n\
+";
   }
 
   static const char* value(const ::sick_safetyscanners::RawMicroScanDataMsg_<ContainerAllocator>&) { return value(); }

@@ -77,23 +77,6 @@ ros::message_operations::Printer< ::sick_safetyscanners::ExtendedLaserScanMsg_<C
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::sick_safetyscanners::ExtendedLaserScanMsg_<ContainerAllocator1> & lhs, const ::sick_safetyscanners::ExtendedLaserScanMsg_<ContainerAllocator2> & rhs)
-{
-  return lhs.laser_scan == rhs.laser_scan &&
-    lhs.reflektor_status == rhs.reflektor_status &&
-    lhs.reflektor_median == rhs.reflektor_median &&
-    lhs.intrusion == rhs.intrusion;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::sick_safetyscanners::ExtendedLaserScanMsg_<ContainerAllocator1> & lhs, const ::sick_safetyscanners::ExtendedLaserScanMsg_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace sick_safetyscanners
 
 namespace ros
@@ -101,6 +84,12 @@ namespace ros
 namespace message_traits
 {
 
+
+
+// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'geometry_msgs': ['/opt/ros/kinetic/share/geometry_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/kinetic/share/sensor_msgs/cmake/../msg'], 'sick_safetyscanners': ['/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/sick_safetyscanners-master/msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -165,60 +154,62 @@ struct Definition< ::sick_safetyscanners::ExtendedLaserScanMsg_<ContainerAllocat
 {
   static const char* value()
   {
-    return "sensor_msgs/LaserScan laser_scan\n"
-"bool[] reflektor_status\n"
-"bool[] reflektor_median\n"
-"bool[] intrusion\n"
-"\n"
-"\n"
-"================================================================================\n"
-"MSG: sensor_msgs/LaserScan\n"
-"# Single scan from a planar laser range-finder\n"
-"#\n"
-"# If you have another ranging device with different behavior (e.g. a sonar\n"
-"# array), please find or create a different message, since applications\n"
-"# will make fairly laser-specific assumptions about this data\n"
-"\n"
-"Header header            # timestamp in the header is the acquisition time of \n"
-"                         # the first ray in the scan.\n"
-"                         #\n"
-"                         # in frame frame_id, angles are measured around \n"
-"                         # the positive Z axis (counterclockwise, if Z is up)\n"
-"                         # with zero angle being forward along the x axis\n"
-"                         \n"
-"float32 angle_min        # start angle of the scan [rad]\n"
-"float32 angle_max        # end angle of the scan [rad]\n"
-"float32 angle_increment  # angular distance between measurements [rad]\n"
-"\n"
-"float32 time_increment   # time between measurements [seconds] - if your scanner\n"
-"                         # is moving, this will be used in interpolating position\n"
-"                         # of 3d points\n"
-"float32 scan_time        # time between scans [seconds]\n"
-"\n"
-"float32 range_min        # minimum range value [m]\n"
-"float32 range_max        # maximum range value [m]\n"
-"\n"
-"float32[] ranges         # range data [m] (Note: values < range_min or > range_max should be discarded)\n"
-"float32[] intensities    # intensity data [device-specific units].  If your\n"
-"                         # device does not provide intensities, please leave\n"
-"                         # the array empty.\n"
-"\n"
-"================================================================================\n"
-"MSG: std_msgs/Header\n"
-"# Standard metadata for higher-level stamped data types.\n"
-"# This is generally used to communicate timestamped data \n"
-"# in a particular coordinate frame.\n"
-"# \n"
-"# sequence ID: consecutively increasing ID \n"
-"uint32 seq\n"
-"#Two-integer timestamp that is expressed as:\n"
-"# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')\n"
-"# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')\n"
-"# time-handling sugar is provided by the client library\n"
-"time stamp\n"
-"#Frame this data is associated with\n"
-"string frame_id\n"
-;
+    return "sensor_msgs/LaserScan laser_scan\n\
+bool[] reflektor_status\n\
+bool[] reflektor_median\n\
+bool[] intrusion\n\
+\n\
+\n\
+================================================================================\n\
+MSG: sensor_msgs/LaserScan\n\
+# Single scan from a planar laser range-finder\n\
+#\n\
+# If you have another ranging device with different behavior (e.g. a sonar\n\
+# array), please find or create a different message, since applications\n\
+# will make fairly laser-specific assumptions about this data\n\
+\n\
+Header header            # timestamp in the header is the acquisition time of \n\
+                         # the first ray in the scan.\n\
+                         #\n\
+                         # in frame frame_id, angles are measured around \n\
+                         # the positive Z axis (counterclockwise, if Z is up)\n\
+                         # with zero angle being forward along the x axis\n\
+                         \n\
+float32 angle_min        # start angle of the scan [rad]\n\
+float32 angle_max        # end angle of the scan [rad]\n\
+float32 angle_increment  # angular distance between measurements [rad]\n\
+\n\
+float32 time_increment   # time between measurements [seconds] - if your scanner\n\
+                         # is moving, this will be used in interpolating position\n\
+                         # of 3d points\n\
+float32 scan_time        # time between scans [seconds]\n\
+\n\
+float32 range_min        # minimum range value [m]\n\
+float32 range_max        # maximum range value [m]\n\
+\n\
+float32[] ranges         # range data [m] (Note: values < range_min or > range_max should be discarded)\n\
+float32[] intensities    # intensity data [device-specific units].  If your\n\
+                         # device does not provide intensities, please leave\n\
+                         # the array empty.\n\
+\n\
+================================================================================\n\
+MSG: std_msgs/Header\n\
+# Standard metadata for higher-level stamped data types.\n\
+# This is generally used to communicate timestamped data \n\
+# in a particular coordinate frame.\n\
+# \n\
+# sequence ID: consecutively increasing ID \n\
+uint32 seq\n\
+#Two-integer timestamp that is expressed as:\n\
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')\n\
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')\n\
+# time-handling sugar is provided by the client library\n\
+time stamp\n\
+#Frame this data is associated with\n\
+# 0: no frame\n\
+# 1: global frame\n\
+string frame_id\n\
+";
   }
 
   static const char* value(const ::sick_safetyscanners::ExtendedLaserScanMsg_<ContainerAllocator>&) { return value(); }
