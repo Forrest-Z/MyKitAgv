@@ -2,7 +2,7 @@ from flask import Flask, request, render_template, redirect, url_for, abort
 from flask_cors import CORS
 
 
-app = Flask(__name__, static_url_path="", static_folder="static")
+app = Flask(__name__)
 CORS(app)
 
 @app.route('/')
@@ -19,4 +19,4 @@ def joystick():
 
 
 if __name__ == '__main__':	
-   app.run(host='0.0.0.0', port=5000, debug=False)
+   app.run(host='0.0.0.0', port=5000, debug=True)
