@@ -24,6 +24,8 @@ let vueApp = new Vue({
             vertical: 0,
             horizontal: 0,
         },
+        ver: 0,
+        hor: 0,
         // publisher
         pubInterval: null,
     },
@@ -56,6 +58,8 @@ let vueApp = new Vue({
                 name: '/cmd_vel',
                 messageType: 'geometry_msgs/Twist'
             })
+            this.ver = this.joystick.vertical*1000
+            this.hor = this.joystick.horizontal*1000
             let message = new ROSLIB.Message({
                 linear: { x: this.joystick.vertical, y: 0, z: 0, },
                 angular: { x: 0, y: 0, z: this.joystick.horizontal, },
