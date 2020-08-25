@@ -67,7 +67,7 @@ set(rosapi_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(rosapi_SOURCE_PREFIX /home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/webRos/rosbridge_suite-master/rosapi)
+  set(rosapi_SOURCE_PREFIX /home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/web_server/rosbridge_suite-master/rosapi)
   set(rosapi_DEVEL_PREFIX /home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel)
   set(rosapi_INSTALL_PREFIX "")
   set(rosapi_PREFIX ${rosapi_DEVEL_PREFIX})
@@ -110,7 +110,7 @@ if(NOT "/home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel/include " STREQUAL " ")
         message(FATAL_ERROR "Project 'rosapi' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'rosapi' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/webRos/rosbridge_suite-master/rosapi/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'rosapi' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/web_server/rosbridge_suite-master/rosapi/${idir}'.  ${_report}")
     endif()
     _list_append_unique(rosapi_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel/lib;/home/nhamtung/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel/lib;/home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel/lib;/home/nhamtung/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

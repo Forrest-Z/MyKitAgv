@@ -1,56 +1,56 @@
 
 "use strict";
 
-let GetParamNames = require('./GetParamNames.js')
+let ServicesForType = require('./ServicesForType.js')
 let ServiceType = require('./ServiceType.js')
 let SearchParam = require('./SearchParam.js')
-let ServiceProviders = require('./ServiceProviders.js')
-let ServiceHost = require('./ServiceHost.js')
-let Subscribers = require('./Subscribers.js')
-let Publishers = require('./Publishers.js')
-let ServiceNode = require('./ServiceNode.js')
-let TopicType = require('./TopicType.js')
-let GetParam = require('./GetParam.js')
-let Nodes = require('./Nodes.js')
 let GetTime = require('./GetTime.js')
-let ServicesForType = require('./ServicesForType.js')
-let GetActionServers = require('./GetActionServers.js')
-let TopicsForType = require('./TopicsForType.js')
-let TopicsAndRawTypes = require('./TopicsAndRawTypes.js')
-let Topics = require('./Topics.js')
+let Publishers = require('./Publishers.js')
+let Nodes = require('./Nodes.js')
 let MessageDetails = require('./MessageDetails.js')
-let ServiceResponseDetails = require('./ServiceResponseDetails.js')
-let SetParam = require('./SetParam.js')
-let HasParam = require('./HasParam.js')
-let NodeDetails = require('./NodeDetails.js')
-let DeleteParam = require('./DeleteParam.js')
+let GetParamNames = require('./GetParamNames.js')
+let Subscribers = require('./Subscribers.js')
+let ServiceNode = require('./ServiceNode.js')
 let ServiceRequestDetails = require('./ServiceRequestDetails.js')
+let ServiceResponseDetails = require('./ServiceResponseDetails.js')
+let TopicsAndRawTypes = require('./TopicsAndRawTypes.js')
 let Services = require('./Services.js')
+let Topics = require('./Topics.js')
+let ServiceHost = require('./ServiceHost.js')
+let SetParam = require('./SetParam.js')
+let NodeDetails = require('./NodeDetails.js')
+let ServiceProviders = require('./ServiceProviders.js')
+let TopicType = require('./TopicType.js')
+let HasParam = require('./HasParam.js')
+let TopicsForType = require('./TopicsForType.js')
+let DeleteParam = require('./DeleteParam.js')
+let GetActionServers = require('./GetActionServers.js')
+let GetParam = require('./GetParam.js')
 
 module.exports = {
-  GetParamNames: GetParamNames,
+  ServicesForType: ServicesForType,
   ServiceType: ServiceType,
   SearchParam: SearchParam,
-  ServiceProviders: ServiceProviders,
-  ServiceHost: ServiceHost,
-  Subscribers: Subscribers,
-  Publishers: Publishers,
-  ServiceNode: ServiceNode,
-  TopicType: TopicType,
-  GetParam: GetParam,
-  Nodes: Nodes,
   GetTime: GetTime,
-  ServicesForType: ServicesForType,
-  GetActionServers: GetActionServers,
-  TopicsForType: TopicsForType,
-  TopicsAndRawTypes: TopicsAndRawTypes,
-  Topics: Topics,
+  Publishers: Publishers,
+  Nodes: Nodes,
   MessageDetails: MessageDetails,
-  ServiceResponseDetails: ServiceResponseDetails,
-  SetParam: SetParam,
-  HasParam: HasParam,
-  NodeDetails: NodeDetails,
-  DeleteParam: DeleteParam,
+  GetParamNames: GetParamNames,
+  Subscribers: Subscribers,
+  ServiceNode: ServiceNode,
   ServiceRequestDetails: ServiceRequestDetails,
+  ServiceResponseDetails: ServiceResponseDetails,
+  TopicsAndRawTypes: TopicsAndRawTypes,
   Services: Services,
+  Topics: Topics,
+  ServiceHost: ServiceHost,
+  SetParam: SetParam,
+  NodeDetails: NodeDetails,
+  ServiceProviders: ServiceProviders,
+  TopicType: TopicType,
+  HasParam: HasParam,
+  TopicsForType: TopicsForType,
+  DeleteParam: DeleteParam,
+  GetActionServers: GetActionServers,
+  GetParam: GetParam,
 };

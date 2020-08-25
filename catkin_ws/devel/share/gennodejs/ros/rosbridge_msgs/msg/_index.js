@@ -1,10 +1,10 @@
 
 "use strict";
 
-let ConnectedClient = require('./ConnectedClient.js');
 let ConnectedClients = require('./ConnectedClients.js');
+let ConnectedClient = require('./ConnectedClient.js');
 
 module.exports = {
-  ConnectedClient: ConnectedClient,
   ConnectedClients: ConnectedClients,
+  ConnectedClient: ConnectedClient,
 };
