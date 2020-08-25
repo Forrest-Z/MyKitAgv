@@ -12,7 +12,7 @@ let vueApp = new Vue({
         x: 0,
         z: 0,
         delta_x: 0.1,
-        delta_z: 0.1,
+        delta_z: 0.3,
     },
     methods: {
         connect: function () {
