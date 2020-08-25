@@ -18,14 +18,13 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel/include"
-  "/opt/ros/melodic/include"
-  "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
-  "/usr/src/googletest/googletest/include"
+  "/opt/ros/kinetic/include"
+  "/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/nhamtung/TungNV/MyKitAgv/catkin_ws/build/gtest/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/nhamtung/TungNV/MyKitAgv/catkin_ws/build/gtest/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

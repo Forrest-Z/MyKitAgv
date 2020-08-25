@@ -96,27 +96,6 @@ ros::message_operations::Printer< ::r2serial_driver::Num_<ContainerAllocator> >:
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::r2serial_driver::Num_<ContainerAllocator1> & lhs, const ::r2serial_driver::Num_<ContainerAllocator2> & rhs)
-{
-  return lhs.RMID == rhs.RMID &&
-    lhs.TMID == rhs.TMID &&
-    lhs.ID == rhs.ID &&
-    lhs.PID == rhs.PID &&
-    lhs.DataNum == rhs.DataNum &&
-    lhs.Dta_Low == rhs.Dta_Low &&
-    lhs.Dta_High == rhs.Dta_High &&
-    lhs.Sum == rhs.Sum;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::r2serial_driver::Num_<ContainerAllocator1> & lhs, const ::r2serial_driver::Num_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace r2serial_driver
 
 namespace ros
@@ -124,6 +103,12 @@ namespace ros
 namespace message_traits
 {
 
+
+
+// BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
+// {'r2serial_driver': ['/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/r2serial_driver/msg'], 'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -188,17 +173,17 @@ struct Definition< ::r2serial_driver::Num_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "uint8 RMID\n"
-"uint8 TMID \n"
-"uint8 ID\n"
-"uint8 PID\n"
-"uint8 DataNum\n"
-"uint8 Dta_Low\n"
-"uint8 Dta_High\n"
-"uint8 Sum\n"
-"\n"
-"\n"
-;
+    return "uint8 RMID\n\
+uint8 TMID \n\
+uint8 ID\n\
+uint8 PID\n\
+uint8 DataNum\n\
+uint8 Dta_Low\n\
+uint8 Dta_High\n\
+uint8 Sum\n\
+\n\
+\n\
+";
   }
 
   static const char* value(const ::r2serial_driver::Num_<ContainerAllocator>&) { return value(); }

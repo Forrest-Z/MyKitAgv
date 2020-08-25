@@ -217,10 +217,10 @@
   "0297b5bdd9c066699bfaf0157aad17e7")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<Authentication-request>)))
   "Returns full string definition for message of type '<Authentication-request>"
-  (cl:format cl:nil "# MAC string given by the client~%string mac~%# IP of the client~%string client~%# IP of the destination~%string dest~%# Random string given by the client~%string rand~%# Time of the authorization request given by the client~%time t~%# User level as a string given by the client~%string level~%# End time of the client's session given by the client~%time end~%~%~%"))
+  (cl:format cl:nil "~%string mac~%~%string client~%~%string dest~%~%string rand~%~%time t~%~%string level~%~%time end~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'Authentication-request)))
   "Returns full string definition for message of type 'Authentication-request"
-  (cl:format cl:nil "# MAC string given by the client~%string mac~%# IP of the client~%string client~%# IP of the destination~%string dest~%# Random string given by the client~%string rand~%# Time of the authorization request given by the client~%time t~%# User level as a string given by the client~%string level~%# End time of the client's session given by the client~%time end~%~%~%"))
+  (cl:format cl:nil "~%string mac~%~%string client~%~%string dest~%~%string rand~%~%time t~%~%string level~%~%time end~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <Authentication-request>))
   (cl:+ 0
      4 (cl:length (cl:slot-value msg 'mac))
@@ -287,10 +287,10 @@
   "0297b5bdd9c066699bfaf0157aad17e7")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<Authentication-response>)))
   "Returns full string definition for message of type '<Authentication-response>"
-  (cl:format cl:nil "# If the user has proper authentication~%bool authenticated~%~%~%~%"))
+  (cl:format cl:nil "~%bool authenticated~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'Authentication-response)))
   "Returns full string definition for message of type 'Authentication-response"
-  (cl:format cl:nil "# If the user has proper authentication~%bool authenticated~%~%~%~%"))
+  (cl:format cl:nil "~%bool authenticated~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <Authentication-response>))
   (cl:+ 0
      1

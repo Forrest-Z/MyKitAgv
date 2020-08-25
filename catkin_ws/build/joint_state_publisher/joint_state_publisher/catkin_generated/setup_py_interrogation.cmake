@@ -1,4 +1,3 @@
-set(joint_state_publisher_SETUP_PY_SETUP_MODULE "setuptools")
 set(joint_state_publisher_SETUP_PY_VERSION "1.15.0")
 set(joint_state_publisher_SETUP_PY_SCRIPTS "")
 set(joint_state_publisher_SETUP_PY_PACKAGES "joint_state_publisher")

@@ -8,6 +8,11 @@ let vueApp = new Vue({
         // page content
         menu_title: 'Connection',
         main_title: 'Main title, from Vue!!',
+
+        x: 0,
+        z: 0,
+        delta_x: 0.1,
+        delta_z: 0.1,
     },
     methods: {
         connect: function () {
@@ -39,9 +44,10 @@ let vueApp = new Vue({
                 name: '/cmd_vel',
                 messageType: 'geometry_msgs/Twist'
             })
+            this.x = this.x + this.delta_x
             let message = new ROSLIB.Message({
-                linear: { x: 0.1, y: 0, z: 0, },
-                angular: { x: 0, y: 0, z: 0, },
+                linear: { x: this.x, y: 0, z: 0, },
+                angular: { x: 0, y: 0, z: this.z, },
             })
             topic.publish(message)
         },
@@ -51,9 +57,10 @@ let vueApp = new Vue({
                 name: '/cmd_vel',
                 messageType: 'geometry_msgs/Twist'
             })
+            this.x = this.x - this.delta_x
             let message = new ROSLIB.Message({
-                linear: { x: -0.1, y: 0, z: 0, },
-                angular: { x: 0, y: 0, z: 0, },
+                linear: { x: this.x, y: 0, z: 0, },
+                angular: { x: 0, y: 0, z: this.z, },
             })
             topic.publish(message)
         },
@@ -63,9 +70,10 @@ let vueApp = new Vue({
                 name: '/cmd_vel',
                 messageType: 'geometry_msgs/Twist'
             })
+            this.z = this.z + this.delta_z
             let message = new ROSLIB.Message({
-                linear: { x: 0, y: 0, z: 0, },
-                angular: { x: 0, y: 0, z: 0.5, },
+                linear: { x: this.x, y: 0, z: 0, },
+                angular: { x: 0, y: 0, z: this.z, },
             })
             topic.publish(message)
         },
@@ -75,9 +83,10 @@ let vueApp = new Vue({
                 name: '/cmd_vel',
                 messageType: 'geometry_msgs/Twist'
             })
+            this.z = this.z - this.delta_z
             let message = new ROSLIB.Message({
-                linear: { x: 1, y: 0, z: 0, },
-                angular: { x: 0, y: 0, z: -0.5, },
+                linear: { x: this.x, y: 0, z: 0, },
+                angular: { x: 0, y: 0, z: this.z, },
             })
             topic.publish(message)
         },
@@ -87,6 +96,8 @@ let vueApp = new Vue({
                 name: '/cmd_vel',
                 messageType: 'geometry_msgs/Twist'
             })
+            this.x = 0
+            this.z = 0
             let message = new ROSLIB.Message({
                 linear: { x: 0, y: 0, z: 0, },
                 angular: { x: 0, y: 0, z: 0, },
