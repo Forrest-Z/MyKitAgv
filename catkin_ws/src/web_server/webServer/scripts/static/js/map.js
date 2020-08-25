@@ -26,8 +26,8 @@ var app = new Vue({
 
                 this.mapViewer = new ROS2D.Viewer({
                     divID: 'map',
-                    width: 420,
-                    height: 360
+                    width: 2024,
+                    height: 700
                 })
 
                 // Setup the map client.

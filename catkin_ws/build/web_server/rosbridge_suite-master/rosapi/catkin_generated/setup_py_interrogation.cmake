@@ -1,3 +1,4 @@
+set(rosapi_SETUP_PY_SETUP_MODULE "distutils.core")
 set(rosapi_SETUP_PY_VERSION "0.11.5")
 set(rosapi_SETUP_PY_SCRIPTS "")
 set(rosapi_SETUP_PY_PACKAGES "rosapi")

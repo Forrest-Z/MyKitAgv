@@ -173,22 +173,22 @@
 (setf (get rosauth::AuthenticationRequest :md5sum-) "0297b5bdd9c066699bfaf0157aad17e7")
 (setf (get rosauth::AuthenticationRequest :datatype-) "rosauth/AuthenticationRequest")
 (setf (get rosauth::AuthenticationRequest :definition-)
-      "
+      "# MAC string given by the client
 string mac
-
+# IP of the client
 string client
-
+# IP of the destination
 string dest
-
+# Random string given by the client
 string rand
-
+# Time of the authorization request given by the client
 time t
-
+# User level as a string given by the client
 string level
-
+# End time of the client's session given by the client
 time end
 ---
-
+# If the user has proper authentication
 bool authenticated
 
 ")
@@ -196,22 +196,22 @@ bool authenticated
 (setf (get rosauth::AuthenticationResponse :md5sum-) "0297b5bdd9c066699bfaf0157aad17e7")
 (setf (get rosauth::AuthenticationResponse :datatype-) "rosauth/AuthenticationResponse")
 (setf (get rosauth::AuthenticationResponse :definition-)
-      "
+      "# MAC string given by the client
 string mac
-
+# IP of the client
 string client
-
+# IP of the destination
 string dest
-
+# Random string given by the client
 string rand
-
+# Time of the authorization request given by the client
 time t
-
+# User level as a string given by the client
 string level
-
+# End time of the client's session given by the client
 time end
 ---
-
+# If the user has proper authentication
 bool authenticated
 
 ")

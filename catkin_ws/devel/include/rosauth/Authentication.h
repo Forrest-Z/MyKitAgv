@@ -57,8 +57,8 @@ struct DataType< ::rosauth::Authentication > {
 };
 
 
-// service_traits::MD5Sum< ::rosauth::AuthenticationRequest> should match 
-// service_traits::MD5Sum< ::rosauth::Authentication > 
+// service_traits::MD5Sum< ::rosauth::AuthenticationRequest> should match
+// service_traits::MD5Sum< ::rosauth::Authentication >
 template<>
 struct MD5Sum< ::rosauth::AuthenticationRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::rosauth::AuthenticationRequest>
   }
 };
 
-// service_traits::DataType< ::rosauth::AuthenticationRequest> should match 
-// service_traits::DataType< ::rosauth::Authentication > 
+// service_traits::DataType< ::rosauth::AuthenticationRequest> should match
+// service_traits::DataType< ::rosauth::Authentication >
 template<>
 struct DataType< ::rosauth::AuthenticationRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::rosauth::AuthenticationRequest>
   }
 };
 
-// service_traits::MD5Sum< ::rosauth::AuthenticationResponse> should match 
-// service_traits::MD5Sum< ::rosauth::Authentication > 
+// service_traits::MD5Sum< ::rosauth::AuthenticationResponse> should match
+// service_traits::MD5Sum< ::rosauth::Authentication >
 template<>
 struct MD5Sum< ::rosauth::AuthenticationResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::rosauth::AuthenticationResponse>
   }
 };
 
-// service_traits::DataType< ::rosauth::AuthenticationResponse> should match 
-// service_traits::DataType< ::rosauth::Authentication > 
+// service_traits::DataType< ::rosauth::AuthenticationResponse> should match
+// service_traits::DataType< ::rosauth::Authentication >
 template<>
 struct DataType< ::rosauth::AuthenticationResponse>
 {

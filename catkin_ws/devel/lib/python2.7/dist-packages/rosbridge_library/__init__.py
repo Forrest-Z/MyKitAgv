@@ -3,11 +3,10 @@
 # keep symbol table as clean as possible by deleting all unnecessary symbols
 
 from os import path as os_path
+from pkgutil import extend_path
 from sys import path as sys_path
 
-from pkgutil import extend_path
-
-__extended_path = "/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/web_server/rosbridge_suite-master/rosbridge_library/src".split(";")
+__extended_path = '/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/web_server/rosbridge_suite-master/rosbridge_library/src'.split(';')
 for p in reversed(__extended_path):
     sys_path.insert(0, p)
     del p

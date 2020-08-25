@@ -138,19 +138,19 @@ class AuthenticationRequest {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    
+    # MAC string given by the client
     string mac
-    
+    # IP of the client
     string client
-    
+    # IP of the destination
     string dest
-    
+    # Random string given by the client
     string rand
-    
+    # Time of the authorization request given by the client
     time t
-    
+    # User level as a string given by the client
     string level
-    
+    # End time of the client's session given by the client
     time end
     
     `;
@@ -264,7 +264,7 @@ class AuthenticationResponse {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    
+    # If the user has proper authentication
     bool authenticated
     
     

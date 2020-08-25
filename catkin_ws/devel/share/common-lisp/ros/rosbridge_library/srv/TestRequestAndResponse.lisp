@@ -59,10 +59,10 @@
   "491d316f183df11876531749005b31d1")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<TestRequestAndResponse-request>)))
   "Returns full string definition for message of type '<TestRequestAndResponse-request>"
-  (cl:format cl:nil "int32 data~%~%~%"))
+  (cl:format cl:nil "int32 data~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'TestRequestAndResponse-request)))
   "Returns full string definition for message of type 'TestRequestAndResponse-request"
-  (cl:format cl:nil "int32 data~%~%~%"))
+  (cl:format cl:nil "int32 data~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <TestRequestAndResponse-request>))
   (cl:+ 0
      4
