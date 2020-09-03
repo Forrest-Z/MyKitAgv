@@ -1,8 +1,0 @@
-prefix=/home/nhamtung/TungNV/MyKitAgv/catkin_ws/install
-
-Name: webServer
-Description: Description of webServer
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

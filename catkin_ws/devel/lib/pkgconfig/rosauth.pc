@@ -1,8 +1,0 @@
-prefix=/home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel
-
-Name: rosauth
-Description: Description of rosauth
-Version: 1.0.1
-Cflags: -I/home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel/include
-Libs: -L${prefix}/lib 
-Requires: roscpp message_runtime

@@ -1,8 +1,0 @@
-prefix=/home/nhamtung/TungNV/MyKitAgv/catkin_ws/install
-
-Name: kit_agv_bringup
-Description: Description of kit_agv_bringup
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

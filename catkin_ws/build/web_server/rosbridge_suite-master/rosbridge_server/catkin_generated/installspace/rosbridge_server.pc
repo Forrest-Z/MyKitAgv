@@ -1,8 +1,0 @@
-prefix=/home/nhamtung/TungNV/MyKitAgv/catkin_ws/install
-
-Name: rosbridge_server
-Description: Description of rosbridge_server
-Version: 0.11.5
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

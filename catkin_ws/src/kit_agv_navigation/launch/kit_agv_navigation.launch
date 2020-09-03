@@ -3,9 +3,9 @@
   <!-- Arguments -->
   <arg name="sensor_ip" default="192.168.1.3"/>
   <arg name="host_ip" default="192.168.1.5"/>
-  <arg name="map_file" default="$(find kit_agv_navigation)/maps/map_709_in2.yaml"/>
+  <arg name="map_file" default="$(find kit_agv_navigation)/maps/map_709_in3.yaml"/>
   <arg name="open_rviz" default="true"/>
-  <arg name="move_forward_only" default="false"/>
+  <!-- <arg name="move_forward_only" default="false"/> -->
 
   <!-- kit_agv -->
   <include file="$(find kit_agv_bringup)/launch/kit_agv_robot.launch">
@@ -22,7 +22,7 @@
 
   <!-- move_base -->
   <include file="$(find kit_agv_navigation)/launch/move_base.launch">
-    <arg name="move_forward_only" value="$(arg move_forward_only)"/>
+    <!-- <arg name="move_forward_only" value="$(arg move_forward_only)"/> -->
   </include>
 
   <!-- Laser Odom -->
