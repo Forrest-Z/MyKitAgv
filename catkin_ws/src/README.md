@@ -54,7 +54,7 @@
 - Run Mapping: $roslaunch kit_agv_slam kit_agv_slam.launch sensor_ip:=192.168.1.3 host_ip:=192.168.1.5 
 - Manual control: $roslaunch kit_agv_teleop kit_agv_teleop_key.launch
 - Enjoy!
-- Save map: $rosrun map_server map_saver -f ~/TungNV/MyKitAGV/catkin_ws/src/kit_agv_navigation/maps/map_name
+- Save map: $rosrun map_server map_saver -f /home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/kit_agv_navigation/maps/map_name
 - Done!
 
 							END - Create Map
