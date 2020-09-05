@@ -5,4 +5,4 @@ PROJECT_CATKIN_DEPENDS = "base_local_planner;costmap_2d;nav_core;pluginlib;roscp
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lcarrot_planner".split(';') if "-lcarrot_planner" != "" else []
 PROJECT_NAME = "carrot_planner"
 PROJECT_SPACE_DIR = "/home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel"
-PROJECT_VERSION = "1.16.7"
+PROJECT_VERSION = "1.16.6"

@@ -67,7 +67,7 @@ set(move_slow_and_clear_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(move_slow_and_clear_SOURCE_PREFIX /home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/navigation-melodic-devel/move_slow_and_clear)
+  set(move_slow_and_clear_SOURCE_PREFIX /home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/navigation/move_slow_and_clear)
   set(move_slow_and_clear_DEVEL_PREFIX /home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel)
   set(move_slow_and_clear_INSTALL_PREFIX "")
   set(move_slow_and_clear_PREFIX ${move_slow_and_clear_DEVEL_PREFIX})
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(move_slow_and_clear_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/navigation-melodic-devel/move_slow_and_clear/include " STREQUAL " ")
+if(NOT "/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/navigation/move_slow_and_clear/include " STREQUAL " ")
   set(move_slow_and_clear_INCLUDE_DIRS "")
-  set(_include_dirs "/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/navigation-melodic-devel/move_slow_and_clear/include")
+  set(_include_dirs "/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/navigation/move_slow_and_clear/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://wiki.ros.org/move_slow_and_clear " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/navigation-melodic-devel/mo
         message(FATAL_ERROR "Project 'move_slow_and_clear' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'move_slow_and_clear' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/navigation-melodic-devel/move_slow_and_clear/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'move_slow_and_clear' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/navigation/move_slow_and_clear/${idir}'.  ${_report}")
     endif()
     _list_append_unique(move_slow_and_clear_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel/lib;/home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel/lib;/home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel/lib;/home/nhamtung/TungNV/MyNavigation/catkin_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

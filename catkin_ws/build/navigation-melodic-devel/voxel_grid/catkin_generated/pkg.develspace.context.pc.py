@@ -5,4 +5,4 @@ PROJECT_CATKIN_DEPENDS = "roscpp".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lvoxel_grid".split(';') if "-lvoxel_grid" != "" else []
 PROJECT_NAME = "voxel_grid"
 PROJECT_SPACE_DIR = "/home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel"
-PROJECT_VERSION = "1.16.7"
+PROJECT_VERSION = "1.16.6"

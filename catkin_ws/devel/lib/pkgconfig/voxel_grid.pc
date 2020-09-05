@@ -2,7 +2,7 @@ prefix=/home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel
 
 Name: voxel_grid
 Description: Description of voxel_grid
-Version: 1.16.7
-Cflags: -I/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/navigation-melodic-devel/voxel_grid/include
+Version: 1.16.6
+Cflags: -I/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/navigation/voxel_grid/include
 Libs: -L${prefix}/lib -lvoxel_grid
 Requires: roscpp

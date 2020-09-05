@@ -4,7 +4,7 @@ group.0 {
 name=Dynamically Reconfigurable Parameters
 desc=See the [[dynamic_reconfigure]] package for details on dynamically reconfigurable parameters.
 0.name= ~base_global_planner
-0.default= navfn/NavfnROS
+0.default= carrot_planner/CarrotPlanner
 0.type= str
 0.desc=The name of the plugin for the global planner to use with move_base. 
 1.name= ~base_local_planner

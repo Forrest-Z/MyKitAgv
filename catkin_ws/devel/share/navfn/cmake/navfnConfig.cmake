@@ -67,7 +67,7 @@ set(navfn_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(navfn_SOURCE_PREFIX /home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/navigation-melodic-devel/navfn)
+  set(navfn_SOURCE_PREFIX /home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/navigation/navfn)
   set(navfn_DEVEL_PREFIX /home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel)
   set(navfn_INSTALL_PREFIX "")
   set(navfn_PREFIX ${navfn_DEVEL_PREFIX})
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(navfn_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel/include;/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/navigation-melodic-devel/navfn/include " STREQUAL " ")
+if(NOT "/home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel/include;/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/navigation/navfn/include " STREQUAL " ")
   set(navfn_INCLUDE_DIRS "")
-  set(_include_dirs "/home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel/include;/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/navigation-melodic-devel/navfn/include")
+  set(_include_dirs "/home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel/include;/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/navigation/navfn/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://wiki.ros.org/navfn " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel/include;/home/nhamtung/Tu
         message(FATAL_ERROR "Project 'navfn' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'navfn' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/navigation-melodic-devel/navfn/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'navfn' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/navigation/navfn/${idir}'.  ${_report}")
     endif()
     _list_append_unique(navfn_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel/lib;/home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel/lib;/home/nhamtung/TungNV/MyKitAgv/catkin_ws/devel/lib;/home/nhamtung/TungNV/MyNavigation/catkin_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

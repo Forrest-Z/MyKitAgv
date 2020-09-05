@@ -455,7 +455,7 @@ MoveBaseConfig::GroupDescription<MoveBaseConfig::DEFAULT, MoveBaseConfig> Defaul
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.base_global_planner = "";
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.base_global_planner = "navfn/NavfnROS";
+      __default__.base_global_planner = "carrot_planner/CarrotPlanner";
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(MoveBaseConfig::AbstractParamDescriptionConstPtr(new MoveBaseConfig::ParamDescription<std::string>("base_global_planner", "str", 0, "The name of the plugin for the global planner to use with move_base.", "", &MoveBaseConfig::base_global_planner)));
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"

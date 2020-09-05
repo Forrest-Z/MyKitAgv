@@ -1,4 +1,4 @@
-image: /home/nhamtung/TungNV/MyNavigation/catkin_ws/src/kit_agv_navigation/maps/map_709_in3.pgm
+image: /home/nhamtung/TungNV/MyKitAgv/catkin_ws/src/kit_agv_navigation/maps/map_709_in3.pgm
 resolution: 0.050000
 origin: [-51.224998, -51.224998, 0.000000]
 negate: 0

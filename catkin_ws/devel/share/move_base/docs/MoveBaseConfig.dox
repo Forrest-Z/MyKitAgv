@@ -2,7 +2,7 @@
 
 Reads and maintains the following parameters on the ROS server
 
-- \b "~base_global_planner" : \b [str] The name of the plugin for the global planner to use with move_base. min: , default: navfn/NavfnROS, max: 
+- \b "~base_global_planner" : \b [str] The name of the plugin for the global planner to use with move_base. min: , default: carrot_planner/CarrotPlanner, max: 
 - \b "~base_local_planner" : \b [str] The name of the plugin for the local planner to use with move_base. min: , default: base_local_planner/TrajectoryPlannerROS, max: 
 - \b "~planner_frequency" : \b [double] The rate in Hz at which to run the planning loop. min: 0.0, default: 0.0, max: 100.0
 - \b "~controller_frequency" : \b [double] The rate in Hz at which to run the control loop and send velocity commands to the base. min: 0.0, default: 20.0, max: 100.0
