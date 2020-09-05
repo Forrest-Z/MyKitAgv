@@ -53,6 +53,18 @@
 							<button class="mt-2 btn btn-primary" :disabled="!connected" @click="turnRight">Turn right!</button>
 							<p></p>
 							<button class="mt-2 btn btn-primary" :disabled="!connected" @click="backward">Backward!</button>
+							<hr>
+                            <p>Subscribing robot data</p>
+                            <p>
+								<span>X: </span>
+								<input type="text" v-model="posx.toFixed(2)" />
+                                <br>
+                                <span>Y: </span>
+								<input type="text" v-model="posy.toFixed(2)" />
+                                <br>
+                                <span>Z: </span>
+								<input type="text" v-model="posz.toFixed(2)" />
+                            </p>
 						</div>
 					</div>
 				</div>
