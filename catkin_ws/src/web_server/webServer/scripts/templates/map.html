@@ -5,22 +5,20 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- ROS stuff -->
-    <script type="text/javascript" src="https://static.robotwebtools.org/EaselJS/current/easeljs.min.js">
+    <script type="text/javascript" src="https://static.robotwebtools.org/EaselJS/current/easeljs.min.js"></script>
+    <script type="text/javascript" src="https://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
 
-    </script>
-    <script type="text/javascript" src="https://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js">
+    <script type="text/javascript" src="https://static.robotwebtools.org/roslibjs/current/roslib.min.js"> </script>
 
-    </script>
-    <script type="text/javascript" src="https://static.robotwebtools.org/roslibjs/current/roslib.min.js">
+    <!-- <script type="text/javascript" src="https://static.robotwebtools.org/ros2djs/current/ros2d.min.js"> </script> -->
+    <script type="text/javascript" src="{{ url_for('static', filename='lib/ros2d.js') }}"></script>
 
-    </script>
-    <script type="text/javascript" src="https://static.robotwebtools.org/ros2djs/current/ros2d.min.js">
+    <script type="text/javascript" src="{{ url_for('static', filename='lib/NavGoal.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='lib/NavPath.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='lib/PoseAndTrace.js') }}"></script>
 
-    </script>
     <!-- Vuejs -->
-    <script src="https://cdn.jsdelivr.net/npm/vue">
-
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"> </script>
 </head>
 
 <body>
@@ -41,8 +39,10 @@
             <div class="col-md-12 col-sm-6" style="overflow:auto;">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h5>Available services</h5>
-                        <label>abc</label>
+                        <span>dataShow: </span>
+                        <input type="text" v-model="dataShow1" />
+                        <span>dataShow: </span>
+                        <input type="text" v-model="dataShow2" />
                     </div>
 
                     <!-- 1st row -->
@@ -54,7 +54,6 @@
         </div>
     </div>
 
-    <!-- <script type="text/javascript" src="main.js"/> -->
     <script type="text/javascript" src="{{ url_for('static', filename='js/map.js') }}"></script>
 
 </body>

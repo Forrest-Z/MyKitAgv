@@ -1,0 +1,5 @@
+                // var navGoal = new ROS2D.NavGoal({
+                //     ros: this.ros,
+                //     rootObject : mapViewer.scene,
+                //     actionTopic : '/move_base'
+                // })
